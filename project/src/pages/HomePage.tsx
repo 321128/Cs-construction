@@ -1,4 +1,5 @@
 import React from 'react';
+import BackgroundSlideshow from '../components/BackgroundSlideshow';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -81,28 +82,21 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1920)'
-          }}
-        ></div>
-        
-        <div className="relative container mx-auto px-4 py-24 lg:py-32">
+      <section className="relative bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 text-white overflow-hidden min-h-[600px]">
+        <BackgroundSlideshow />
+        <div className="relative container mx-auto px-4 py-24 lg:py-32 z-10">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-600/30 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-accent-400/30 backdrop-blur-sm rounded-full text-sm font-medium mb-6">
               <Award className="h-4 w-4 mr-2" />
               30+ Years of Engineering Excellence
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
               Building India's
-              <span className="block text-yellow-400">Strategic Infrastructure</span>
+              <span className="block text-accent-400">Strategic Infrastructure</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed max-w-3xl">
+            <p className="text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed max-w-3xl">
               Leading EPC contractor specializing in defense projects, strategic tunnels, 
               and critical infrastructure for government and enterprise clients.
             </p>
@@ -110,14 +104,14 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Link
                 to="/projects"
-                className="inline-flex items-center px-8 py-4 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-accent-400 text-gray-900 rounded-lg font-semibold hover:bg-accent-500 transition-all duration-200 transform hover:scale-105"
               >
                 View Our Projects
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-600 transition-all duration-200"
               >
                 Get Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -126,7 +120,7 @@ const HomePage = () => {
 
             {/* Marquee of Key Achievements */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-              <div className="text-sm text-blue-200 mb-2">Recent Milestones</div>
+              <div className="text-sm text-white/80 mb-2">Recent Milestones</div>
               <div className="overflow-hidden">
                 <div className="animate-pulse space-y-2">
                   <div className="text-white font-medium">✓ Sungal Tunnel (₹508 Cr) - Successfully Completed</div>
@@ -145,7 +139,7 @@ const HomePage = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-xl mb-4 group-hover:bg-blue-700 transition-colors duration-200">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-600 text-white rounded-xl mb-4 group-hover:bg-brand-700 transition-colors duration-200">
                   <stat.icon className="h-8 w-8" />
                 </div>
                 <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -182,19 +176,19 @@ const HomePage = () => {
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       project.status === 'Completed' 
                         ? 'bg-green-100 text-green-800' 
-                        : 'bg-blue-100 text-blue-800'
+                        : 'bg-accent-100 text-accent-800'
                     }`}>
                       {project.status}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <div className="text-blue-600 font-semibold mb-2">{project.client}</div>
+                  <div className="text-xl font-bold text-gray-900 mb-2">{project.title}</div>
+                  <div className="text-brand-600 font-semibold mb-2">{project.client}</div>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-gray-900">{project.value}</span>
-                    <ArrowRight className="h-5 w-5 text-blue-600 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="h-5 w-5 text-brand-600 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </div>
               </div>
@@ -204,7 +198,7 @@ const HomePage = () => {
           <div className="text-center mt-12">
             <Link
               to="/projects"
-              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+              className="inline-flex items-center px-8 py-3 bg-brand-600 text-white rounded-lg font-semibold hover:bg-brand-700 transition-colors duration-200"
             >
               View All Projects
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -229,7 +223,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-xl mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent-100 text-brand-600 rounded-xl mb-6">
                   <capability.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>
@@ -264,8 +258,8 @@ const HomePage = () => {
             {clients.map((client, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center group hover-lift">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-blue-200 transition-colors duration-200">
-                    <span className="font-bold text-blue-600">{client.logo}</span>
+                  <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-accent-200 transition-colors duration-200">
+                    <span className="font-bold text-brand-600">{client.logo}</span>
                   </div>
                   <div className="text-sm font-medium text-gray-600">{client.name}</div>
                 </div>
@@ -276,26 +270,26 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-brand-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Ready to Build Something Extraordinary?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Partner with CS Construction for your next strategic infrastructure project. 
             Let's discuss how we can bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="inline-flex items-center px-8 py-4 bg-white text-brand-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/about"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-600 transition-all duration-200"
             >
               Learn More About Us
             </Link>

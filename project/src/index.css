@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Logo-inspired custom styles */
+@layer components {
+  .logo-gradient {
+    background: linear-gradient(135deg, #C80000 0%, #C80000 40%, #FFCC00 40%, #FFCC00 60%, #FFA500 60%, #FFA500 80%, #FFD700 80%);
+  }
+  
+  .brand-gradient {
+    background: linear-gradient(135deg, #C80000 0%, #b91c1c 100%);
+  }
+  
+  .accent-gradient {
+    background: linear-gradient(135deg, #FFCC00 0%, #FFA500 50%, #FFD700 100%);
+  }
+  
+  .diamond-pattern {
+    background-image: 
+      linear-gradient(45deg, #FFA500 25%, transparent 25%), 
+      linear-gradient(-45deg, #FFA500 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #FFD700 75%), 
+      linear-gradient(-45deg, transparent 75%, #FFD700 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+  
+  .brand-hover {
+    @apply hover:bg-brand-700 transition-colors duration-200;
+  }
+  
+  .accent-hover {
+    @apply hover:bg-accent-500 transition-colors duration-200;
+  }
+}
+
 /* Page Transition Animations */
 @keyframes fadeIn {
   from {

@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2 px-4 text-sm">
+      <div className="bg-brand-600 text-white py-2 px-4 text-sm">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
@@ -57,7 +57,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl">
+              <div className="bg-gradient-to-br from-brand-600 to-brand-700 text-white p-2 rounded-lg font-bold text-xl shadow-lg">
                 CS
               </div>
               <div>
@@ -74,13 +74,13 @@ const Header = () => {
                   to={item.href}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                     location.pathname === item.href
-                      ? 'text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-brand-600'
+                      : 'text-gray-700 hover:text-brand-600'
                   }`}
                 >
                   {item.name}
                   {location.pathname === item.href && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full" />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-600 rounded-full" />
                   )}
                 </Link>
               ))}
@@ -90,7 +90,7 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 to="/contact"
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 btn-animate hover:shadow-lg transform hover:scale-105"
+                className="bg-gradient-to-r from-brand-600 to-brand-700 text-white px-6 py-2 rounded-lg font-medium hover:from-brand-700 hover:to-brand-800 transition-all duration-300 btn-animate hover:shadow-lg transform hover:scale-105"
               >
                 Get Quote
               </Link>
@@ -128,8 +128,8 @@ const Header = () => {
                       : 'translate-x-4 opacity-0'
                   } ${
                     location.pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-brand-600 bg-accent-50'
+                      : 'text-gray-700 hover:text-brand-600 hover:bg-gray-50'
                   } rounded-lg hover:scale-105`}
                   style={{ transitionDelay: `${index * 50}ms` }}
                   onClick={() => setIsMenuOpen(false)}
@@ -139,7 +139,7 @@ const Header = () => {
               ))}
               <Link
                 to="/contact"
-                className={`block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 mt-6 btn-animate transform hover:scale-105 ${
+                className={`block w-full text-center bg-gradient-to-r from-brand-600 to-brand-700 text-white px-6 py-3 rounded-lg font-medium hover:from-brand-700 hover:to-brand-800 transition-all duration-300 mt-6 btn-animate transform hover:scale-105 ${
                   isMenuOpen 
                     ? 'translate-x-0 opacity-100' 
                     : 'translate-x-4 opacity-0'
