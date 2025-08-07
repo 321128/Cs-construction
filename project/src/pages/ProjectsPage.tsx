@@ -126,14 +126,14 @@ const ProjectsPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative text-white py-24">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1920)'
+            backgroundImage: 'url(/csc4.png)'
           }}
         ></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

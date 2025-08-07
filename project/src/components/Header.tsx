@@ -57,9 +57,11 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-brand-600 to-brand-700 text-white p-2 rounded-lg font-bold text-xl shadow-lg">
-                CS
-              </div>
+              <img 
+                src="/logo.jpg" 
+                alt="CS Construction Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <div>
                 <div className="font-bold text-xl text-gray-900">CS Construction</div>
                 <div className="text-sm text-gray-600">Company Pvt. Ltd.</div>

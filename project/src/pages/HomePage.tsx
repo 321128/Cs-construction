@@ -97,8 +97,7 @@ const HomePage = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed max-w-3xl">
-              Leading EPC contractor specializing in defense projects, strategic tunnels, 
-              and critical infrastructure for government and enterprise clients.
+              Forging tomorrow's pathway /n Beaneath and beyond
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
