@@ -50,12 +50,12 @@ const HomePage = () => {
   ];
 
   const clients = [
-    { name: 'DRDO', logo: 'DRDO' },
-    { name: 'BRO', logo: 'BRO' },
-    { name: 'NHAI', logo: 'NHAI' },
-    { name: 'NTPC', logo: 'NTPC' },
-    { name: 'L&T', logo: 'L&T' },
-    { name: 'IRCON', logo: 'IRCON' },
+    { name: 'DRDO', logo: '/Drdo.jpeg' },
+    { name: 'BRO', logo: '/brojpeg' },
+    { name: 'NHAI', logo: '/Nhai.jpeg' },
+    { name: 'NTPC', logo: '/ntpc.png' },
+    { name: 'L&T', logo: '/LnT.png' },
+    { name: 'IRCON', logo: '/ircon.png' },
   ];
 
   const capabilities = [
@@ -257,8 +257,12 @@ const HomePage = () => {
             {clients.map((client, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center group hover-lift">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-accent-200 transition-colors duration-200">
-                    <span className="font-bold text-brand-600">{client.logo}</span>
+                  <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-3 mx-auto group-hover:bg-accent-200 transition-colors duration-200 overflow-hidden">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   <div className="text-sm font-medium text-gray-600">{client.name}</div>
                 </div>
