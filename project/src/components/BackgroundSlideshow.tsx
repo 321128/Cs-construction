@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 const images = [
-  '/cs.png',
-  '/cs2.png',
-  '/csc1.png',
-  '/csc2.png',
-  '/csc3.png',
-  '/csc4.png',
-  '/csc5.png',
+  '/cscs1.JPG',
+  '/cscs2.JPG',
+  '/cscs3.JPG',
+  '/cscs4.JPG',
 ];
 
 const BackgroundSlideshow: React.FC = () => {
